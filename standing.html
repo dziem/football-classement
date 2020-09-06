@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Standing</title>
+    <meta name="description" content="Live Football Score" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+	<link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#F44336" />
+  </head>
+  <body>
+	<a class="btn-floating fixed-back btn-large waves-effect waves-light red" href="./index.html"><i class="material-icons">arrow_back</i></a>
+    <div id="body-content"></div>
+	
+	<script src="js/materialize.min.js"></script>
+	<script src="js/idb.js"></script>
+	<script src="js/db.js"></script>
+	<script src="sw-reg.js"></script>
+	<script src="js/api.js"></script>
+    <script>
+	document.addEventListener("DOMContentLoaded", function() {
+        getStanding();
+    });
+    </script>
+  </body>
+</html>

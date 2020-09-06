@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LiveScore</title>
+    <meta name="description" content="Live Football Score" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="/manifest.json" />
+	<link rel="apple-touch-icon" href="/icon.png">
+    <meta name="theme-color" content="#F44336" />
+  </head>
+  <body>
+
+    <div id="body-content">
+		<ul class="tabs tabs-fixed-width z-depth-1">
+			<li class="tab col s6"><a class="active" href="#all">All Leagues</a></li>
+			<li class="tab col s6"><a href="#my">My Teams</a></li>
+		</ul>
+		<div id="all" class="col s12"></div>
+		<div id="my" class="col s12"></div>
+	</div>
+	
+	<script src="js/materialize.min.js"></script>
+	<script src="js/idb.js"></script>
+	<script src="js/db.js"></script>
+	<script src="sw-reg.js"></script>
+	<script src="notif-reg.js"></script>
+	<script src="js/api.js"></script>
+    <script>
+	document.addEventListener("DOMContentLoaded", function() {
+		var el = document.querySelectorAll(".tabs");
+		var instance = M.Tabs.init(el, {"swipeable": false});
+		getLeagues();
+		getSavedTeams();
+	});
+    </script>
+  </body>
+</html>
